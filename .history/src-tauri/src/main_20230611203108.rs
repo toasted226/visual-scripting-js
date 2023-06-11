@@ -12,13 +12,13 @@ struct UserFile {
 #[tauri::command]
 fn enumerate_files(dir: &str) -> Result<Vec<String>, io::Error> {
     let paths = fs::read_dir(dir)?;
-    let mut files: Vec<String> = Vec::new();
+    let mut files = Vec::new();
 
     for path in paths {
-        files.push(path.unwrap().path().display().to_string());
+        files.push(path);
     }
 
-    Ok(files)
+    files
 }
 
 fn main() {

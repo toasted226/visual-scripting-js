@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 function App() {
     return (
         <div className="container">
-            <Navbar />
+            <Navbar name="myfolder" path="/myfolder" />
         </div>
     );
 }

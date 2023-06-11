@@ -1,7 +1,7 @@
+use std::io;
+
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
-
-use std::{io, fs};
 
 struct UserFile {
     name: String,
@@ -10,15 +10,8 @@ struct UserFile {
 }
 
 #[tauri::command]
-fn enumerate_files(dir: &str) -> Result<Vec<String>, io::Error> {
-    let paths = fs::read_dir(dir)?;
-    let mut files: Vec<String> = Vec::new();
+fn enumerate_files<E>() -> Result<Vec<UserFile>, io::Error> {
 
-    for path in paths {
-        files.push(path.unwrap().path().display().to_string());
-    }
-
-    Ok(files)
 }
 
 fn main() {

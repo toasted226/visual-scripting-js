@@ -15,7 +15,7 @@ fn enumerate_files(dir: &str) -> Result<Vec<String>, io::Error> {
     let mut files: Vec<String> = Vec::new();
 
     for path in paths {
-        files.push(path.unwrap().path().display().to_string());
+        files.push();
     }
 
     Ok(files)
