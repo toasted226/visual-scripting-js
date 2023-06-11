@@ -22,7 +22,7 @@ function App() {
             <Navbar />
             <div className="content">
                 <h1>Paths</h1>
-                {/* TODO: We need to have some sort of native menu option to select a directory */}
+                // TODO: We need to have some sort of native menu option to select a directory
                 <button onClick={load_paths}>Load Paths</button>
                 {paths.map((path) => {
                     return <p>{path}</p>

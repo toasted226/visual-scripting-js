@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 function App() {
     const [paths, setPaths] = useState<string[]>([]);
 
-    // Do not run this function every rendering frame, will freeze the app!
+    // Do not run this function on every render, will freeze the app!
     function load_paths() {
         invoke("enumerate_files", { dir: "/" })
             .then((res) => {
@@ -22,7 +22,6 @@ function App() {
             <Navbar />
             <div className="content">
                 <h1>Paths</h1>
-                {/* TODO: We need to have some sort of native menu option to select a directory */}
                 <button onClick={load_paths}>Load Paths</button>
                 {paths.map((path) => {
                     return <p>{path}</p>

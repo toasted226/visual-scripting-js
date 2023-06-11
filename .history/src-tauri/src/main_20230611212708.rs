@@ -3,8 +3,6 @@
 
 use std::{io, fs};
 
-use tauri::InvokeError;
-
 struct UserFile {
     name: String,
     path: String,
@@ -12,12 +10,8 @@ struct UserFile {
 }
 
 #[tauri::command]
-fn enumerate_files(dir: &str) -> Result<Vec<String>, InvokeError> {
-    let paths = match fs::read_dir(dir) {
-        Ok(paths) => paths,
-        Err(_) => return Err(InvokeError::from("Error reading directory")),
-    };
-
+fn enumerate_files(dir: &str) -> Result<Vec<String>, io::Error> {
+    let paths = fs::read_dir(dir)?;
     let mut files: Vec<String> = Vec::new();
 
     for path in paths {

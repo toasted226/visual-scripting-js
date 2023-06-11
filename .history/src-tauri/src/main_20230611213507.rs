@@ -15,8 +15,9 @@ struct UserFile {
 fn enumerate_files(dir: &str) -> Result<Vec<String>, InvokeError> {
     let paths = match fs::read_dir(dir) {
         Ok(paths) => paths,
-        Err(_) => return Err(InvokeError::from("Error reading directory")),
+        Err(_) => return Err(InvokeError::from(io::Error::new(io::ErrorKind::NotFound, "Directory not found"))),
     };
+    }
 
     let mut files: Vec<String> = Vec::new();
 
