@@ -4,8 +4,8 @@ import "./Navbar.css";
 function Navbar() {
     return (
         <nav className="navbar">
-            <h1>Editor</h1>
-            <button className="compile-btn">Compile</button>
+            <h3>Editor</h3>
+            <button>Compile</button>
         </nav>
     );
 }
