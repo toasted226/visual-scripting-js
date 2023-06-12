@@ -1,0 +1,21 @@
+.navbar {
+    background-color: #1f1f1f;
+    margin: 0;
+    padding: 10px 0 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.compile-btn {
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    height: 40px;
+}
+
+.compile-btn:hover {
+    background-color: #1f1f1f;
+    border: 1px solid white;
+}
