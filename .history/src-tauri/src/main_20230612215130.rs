@@ -1,8 +1,9 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use std::fs;
-use tauri::{CustomMenuItem, Menu, Submenu, InvokeError};
+use std::path;
+use std::{fs, path::PathBuf};
+use tauri::{CustomMenuItem, Menu, Submenu, InvokeError, window};
 use tauri::api::dialog::FileDialogBuilder;
 
 struct UserFile {
