@@ -1,0 +1,17 @@
+.sidebar {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1f1f1f;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+}

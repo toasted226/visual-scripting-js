@@ -1,0 +1,8 @@
+.file-explorer {
+    overflow-x: hidden;
+    height: 90%;
+}
+
+.file-list {
+    max-height: 100%;
+}

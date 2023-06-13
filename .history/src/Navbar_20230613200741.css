@@ -1,0 +1,26 @@
+.navbar {
+    background-color: #1f1f1f;
+    margin-left: 25%;
+    padding: 10px 50px 5px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #4f4f4f;
+    height: 50px;
+    position: fixed;
+    width: 75%;
+}
+
+.compile-btn {
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    height: 40px;
+}
+
+.compile-btn:hover {
+    background-color: #1f1f1f;
+    border: 1px solid white;
+}

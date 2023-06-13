@@ -1,0 +1,13 @@
+.file {
+    margin: 0;
+    padding: 0;
+}
+
+.file > p {
+    margin: 0;
+    padding: 2px 0 2px 10px;
+}
+
+.file:hover {
+    background-color: #3f3f3f;
+}
