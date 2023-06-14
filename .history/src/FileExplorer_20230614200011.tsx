@@ -12,12 +12,6 @@ export interface UserFile {
 
 function FileExplorer(props: {dir: string}) {
     const [files, setFiles] = useState<UserFile[]>([]);
-    const [loaded, setLoaded] = useState(false);
-
-    if (props.dir != "" && !loaded) {
-        load_paths(props.dir);
-        setLoaded(true);
-    }
 
     // listen for the get-folder event
     listen("get-folder", async (event) => {
@@ -25,10 +19,10 @@ function FileExplorer(props: {dir: string}) {
     });
 
     // Do not run this function every rendering frame, will freeze the app!
-    async function load_paths(dir: string) {
-        let result: UserFile[] = await invoke("enumerate_files", { dir });
-        setFiles(result);
-    }
+async function load_paths(dir: string) {
+    let result: UserFile[] = await invoke("enumerate_files", { dir });
+    setFiles(result);
+}
 
     return (
         <div className="file-explorer">

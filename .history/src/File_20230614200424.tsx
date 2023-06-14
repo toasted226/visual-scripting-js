@@ -2,6 +2,7 @@ import { useState } from "react";
 import { UserFile } from "./FileExplorer";
 import "./File.css";
 import FileExplorer from "./FileExplorer";
+import { emit } from "@tauri-apps/api/event";
 
 function File(props: UserFile) {
     const [isExpanded, setIsExpanded] = useState(false);

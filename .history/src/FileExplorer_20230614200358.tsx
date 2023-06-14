@@ -10,14 +10,12 @@ export interface UserFile {
     is_folder: boolean,
 }
 
+function load() {
+    load_paths("");
+}
+
 function FileExplorer(props: {dir: string}) {
     const [files, setFiles] = useState<UserFile[]>([]);
-    const [loaded, setLoaded] = useState(false);
-
-    if (props.dir != "" && !loaded) {
-        load_paths(props.dir);
-        setLoaded(true);
-    }
 
     // listen for the get-folder event
     listen("get-folder", async (event) => {

@@ -15,11 +15,7 @@ function File(props: UserFile) {
                 }}>
                 <p>{props.name}</p>
             </div>
-            {isExpanded ? (
-                <FileExplorer dir={props.path} />
-            ) : (
-                <></>
-            )}
+            
         </>
     );
 }
