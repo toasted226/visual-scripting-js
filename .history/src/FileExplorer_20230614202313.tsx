@@ -33,7 +33,7 @@ function FileExplorer(props: {dir: string}) {
     }
 
     return (
-        <div className="file-explorer" style={{marginLeft: `${margin}px`}}>
+        <div className="file-explorer" style={{margin: {margin};}}}>
             <div className="file-list">
                 {files.map((file) => {
                     return <File name={file.name} path={file.path} is_folder={file.is_folder} />

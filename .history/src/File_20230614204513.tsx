@@ -8,8 +8,8 @@ function File(props: UserFile) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     // listen for the get-folder event
-    listen("get-folder", async () => {
-        setIsExpanded(false);
+    listen("get-folder", async (event) => {
+        load_paths(event.payload as string);
     });
 
     return (

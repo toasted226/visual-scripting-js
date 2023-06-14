@@ -13,12 +13,10 @@ export interface UserFile {
 function FileExplorer(props: {dir: string}) {
     const [files, setFiles] = useState<UserFile[]>([]);
     const [loaded, setLoaded] = useState(false);
-    const [margin, setMargin] = useState(0);
 
     if (props.dir != "" && !loaded) {
         load_paths(props.dir);
         setLoaded(true);
-        setMargin(10);
     }
 
     // listen for the get-folder event
@@ -33,7 +31,7 @@ function FileExplorer(props: {dir: string}) {
     }
 
     return (
-        <div className="file-explorer" style={{marginLeft: `${margin}px`}}>
+        <div className="file-explorer" style={margin: 10;}}>
             <div className="file-list">
                 {files.map((file) => {
                     return <File name={file.name} path={file.path} is_folder={file.is_folder} />
