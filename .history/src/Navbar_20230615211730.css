@@ -9,7 +9,6 @@
     height: 50px;
     position: fixed;
     width: 75%;
-    z-index: 1;
 }
 
 .compile-btn {

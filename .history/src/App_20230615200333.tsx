@@ -6,8 +6,8 @@ import "./App.css";
 function App() {
     return (
         <div className="container">
-            <Navbar />
-            <Sidebar />
+            {/* <Navbar /> */}
+            {/* <Sidebar /> */}
             <Canvas />
         </div>
     );

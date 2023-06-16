@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import Canvas from "./Canvas";
 import "./App.css";
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
         <div className="container">
             <Navbar />
             <Sidebar />
-            <Canvas />
         </div>
     );
 }
