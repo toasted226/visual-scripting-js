@@ -1,0 +1,17 @@
+.canvas {
+    z-index: 2;
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.title {
+    user-select: none;
+}
+
+.input {
+    background-color: "#4f4f4f";
+    color: "#ffffff";
+}

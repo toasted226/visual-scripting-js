@@ -1,0 +1,9 @@
+.canvas {
+    z-index: 2;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.canvas > Stage {
+
+}

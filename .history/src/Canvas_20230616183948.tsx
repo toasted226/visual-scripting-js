@@ -1,13 +1,21 @@
-import { Stage, Layer, Rect } from 'react-konva';
+import { Stage, Layer, Rect, Line } from 'react-konva';
 import { useRef } from 'react';
 import Konva from 'konva';
 import { Vector2d } from 'konva/lib/types';
 import "./Canvas.css";
 
-const scaleBy = 1.25;
+const scaleBy = 1.05;
+const gridStep = 100;
 
 function Canvas() {
     const stageRef = useRef(null);
+    const gridLayerRef = useRef(null);
+
+    function drawGrid() {
+        if (gridLayerRef.current != null) {
+            
+        }
+    }
 
     function zoomStage(event: any) {
         event.evt.preventDefault();
@@ -44,8 +52,10 @@ function Canvas() {
             draggable 
             ref={stageRef} 
             onWheel={zoomStage}>
+                <Layer ref={gridLayerRef}>{drawGrid}</Layer>
                 <Layer>
                     <Rect width={50} height={50} x={300} y={300} fill='red' perfectDrawEnabled={true} />
+                    <Rect width={50} height={50} x={5000} y={300} fill='blue' perfectDrawEnabled={true} />
                 </Layer>
             </Stage>
         </div>
