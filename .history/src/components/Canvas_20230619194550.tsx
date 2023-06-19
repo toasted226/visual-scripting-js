@@ -183,16 +183,7 @@ function Canvas() {
                             strokeWidth={1}
                             fill='green'
                             rotation={90}
-                            x={15}
-                            y={10} />
-                        <RegularPolygon
-                            sides={3}
-                            radius={5}
-                            stroke="white"
-                            strokeWidth={1}
-                            fill='green'
-                            rotation={90}
-                            x={105}
+                            x={10}
                             y={10} />
                         <Text 
                             text="Add"

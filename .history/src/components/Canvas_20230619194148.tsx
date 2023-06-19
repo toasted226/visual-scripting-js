@@ -164,7 +164,7 @@ function Canvas() {
                     <Group draggable x={300} y={300}>
                         <Rect 
                             width={120} 
-                            height={90} 
+                            height={80} 
                             fill='#1f1f1f' 
                             perfectDrawEnabled={false}
                             cornerRadius={10}
@@ -178,43 +178,32 @@ function Canvas() {
                             strokeWidth={1} />
                         <RegularPolygon
                             sides={3}
-                            radius={5}
+                            radius={7}
                             stroke="white"
                             strokeWidth={1}
                             fill='green'
-                            rotation={90}
-                            x={15}
-                            y={10} />
-                        <RegularPolygon
-                            sides={3}
-                            radius={5}
-                            stroke="white"
-                            strokeWidth={1}
-                            fill='green'
-                            rotation={90}
-                            x={105}
-                            y={10} />
+                            rotation={90} />
                         <Text 
                             text="Add"
                             fill='white'
                             fontSize={20}
                             x={10}
-                            y={20} />
-                        <Circle fill="green" stroke="white" strokeWidth={1} width={10} height={10} x={15} y={55} />
+                            y={10} />
+                        <Circle fill="green" stroke="white" strokeWidth={1} width={10} height={10} x={15} y={45} />
                         <Text text="a"
                             fill="white"
                             x={30}
-                            y={50} />
-                        <Circle fill="green" stroke="white" strokeWidth={1} width={10} height={10} x={15} y={75} />
+                            y={40} />
+                        <Circle fill="green" stroke="white" strokeWidth={1} width={10} height={10} x={15} y={65} />
                         <Text text="b"
                             fill="white"
                             x={30}
-                            y={70} />
-                        <Circle fill="red" stroke="white" strokeWidth={1} width={10} height={10} x={100} y={55} />
+                            y={60} />
+                        <Circle fill="red" stroke="white" strokeWidth={1} width={10} height={10} x={100} y={45} />
                         <Text text="c"
                             fill="white"
                             x={80}
-                            y={50} />
+                            y={40} />
                     </Group>
                 </Layer>
             </Stage>
